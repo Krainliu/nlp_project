@@ -8,10 +8,11 @@ import math
 import time
 import torch
 import warnings
+from tqdm import tqdm
 from bert_score.bert_score import score
 from argument_config import config_argument
+from tools.tools import generate, read_csv, write_json, read_json, logFrame
 from transformers import MT5ForConditionalGeneration, MT5Tokenizer, Adafactor
-from tools.tools import generate, read_csv, write_json, read_json, write_logger_info, logFrame
 
 warnings.filterwarnings("ignore")
 base_dir = os.path.dirname(__file__)
@@ -50,7 +51,7 @@ def evaluate(arg, eval_model, eval_data_loader, device):
     eval_model.eval()
     total_val_loss = 0
     pre_text_list, org_text_list = list(), list()
-    for j in range(eval_num_of_batches):
+    for j in tqdm(range(eval_num_of_batches)):
         input_batch, label_batch = list(), list()
         eval_batch_data = eval_data_loader[j * arg.eval_batch_size:j * arg.eval_batch_size + arg.eval_batch_size]
         for index, eval_row in enumerate(eval_batch_data):
@@ -58,7 +59,7 @@ def evaluate(arg, eval_model, eval_data_loader, device):
             input_batch.append(inputs)
             labels = eval_row['target_text'] + '</s>'
             label_batch.append(labels)
-            org_text_list.append(eval_row['input_text'])
+            org_text_list.append(eval_row['target_text'])
             # 验证集预测，获得结果
         input_batch = tokenizer.batch_encode_plus(
             input_batch, padding=True, max_length=args.max_length, return_tensors='pt')["input_ids"]
@@ -70,16 +71,17 @@ def evaluate(arg, eval_model, eval_data_loader, device):
         result_outputs = eval_model.generate(input_batch, max_length=arg.max_length, min_length=0)
         pre_text = [re.sub('<pad> |</s>|# | <pad>', "", tokenizer.decode(result_out, errors='ignore'))
                     for result_out in result_outputs]
-        pre_text_list +=pre_text
+        pre_text_list += pre_text
         loss = outputs.loss
         if isinstance(eval_model, torch.nn.DataParallel):
             loss = loss.mean()
             total_val_loss += loss.mean().item()
+
     P, R, F1 = score(pre_text_list, org_text_list, lang="zh", verbose=True)
     eval_loss = total_val_loss / int(eval_num_of_batches)
     perplexity = math.exp(eval_loss)
     perplexity = torch.tensor(perplexity)
-    logger.info(f"Eval_loss:{eval_loss},perplexity:{perplexity},F1:{F1.mean():.3f},精确率:"
+    logger.info(f"Eval_loss:{total_val_loss},perplexity:{perplexity},F1:{F1.mean():.3f},精确率:"
                 f"{P.mean():.3f}，召回率:{R.mean():.3f}")
     return eval_loss, perplexity
 
@@ -141,12 +143,6 @@ def model_train():
         # todo 添加验证集验证，当满足某些条件时，可以进行模型保存
         if args.do_eval and args.evaluate_during_training:
             evaluate(args, model, eval_or_test_data, dev)
-        # if acc > best_acc:
-        #     best_acc = acc
-        #     torch.save(model.state_dict(), "best_bert_model.pth")
-        #
-        # print("current acc is {:.4f}, best acc is {:.4f}".format(acc, best_acc))
-        # print("time costed = {}s \n".format(round(time.time() - start, 5)))
 
         save_model_file_dir = os.path.join(args.output, f"checkpoint-{epoch}")
         if not os.path.exists(save_model_file_dir):
