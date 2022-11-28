@@ -1,0 +1,6 @@
+Namespace(batch_size=4, clip_threshold=1.0, data_set_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data/demo_data.csv', decay_rate=-0.8, eps=(1e-30, 0.001), eval_or_test_data_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\eval_or_test_data.json', is_training=True, learn_rate=1e-05, logging_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\logs', max_length=400, model_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\pretrain_model\\mt5-base', network='mt5-base', no_cuda=False, num_of_epochs=2, output='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output', predict_file_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\test_predict.json', predict_model_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output\\checkpoint-30', print_log_step=99, save_train_data_path='E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\train_data.json', split_rate=0.9, weight_decay=0.0)
+Running epoch: 2
+total batch num:1254,batch_num:1,loss:10.6364164352417,time:0.3480415344238281
+
+total batch num:1254,batch_num:100,loss:9.451377868652344,time:37.96689414978027
+

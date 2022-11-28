@@ -1,0 +1,32 @@
+2022_11_27 14:03:07 | zh_train.py：19 行 | INFO | {
+    "eps": [
+        1e-30,
+        0.001
+    ],
+    "learn_rate": 1e-05,
+    "batch_size": 4,
+    "max_length": 512,
+    "no_cuda": false,
+    "is_training": true,
+    "num_of_epochs": 100,
+    "weight_decay": 0.0,
+    "split_rate": 0.9,
+    "decay_rate": -0.8,
+    "network": "mt5-base",
+    "data_set_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data/demo_data.csv",
+    "print_log_step": 99,
+    "clip_threshold": 1.0,
+    "save_train_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\train_data.json",
+    "logging_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\logs",
+    "eval_or_test_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\eval_or_test_data.json",
+    "model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\pretrain_model\\mt5-base",
+    "predict_model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output\\checkpoint-30",
+    "output": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output",
+    "predict_file_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\test_predict.json"
+}
+2022_11_27 14:03:07 | zh_train.py：33 行 | INFO | Running on the GPU
+2022_11_27 14:03:13 | zh_train.py：60 行 | INFO | Running epoch: 1
+2022_11_27 14:03:15 | zh_train.py：93 行 | INFO | total batch num:1254,batch_num:1,loss:19.6170597076416,time:1.6580002307891846
+
+2022_11_27 14:03:53 | zh_train.py：93 行 | INFO | total batch num:1254,batch_num:100,loss:24.925498962402344,time:39.86327791213989
+

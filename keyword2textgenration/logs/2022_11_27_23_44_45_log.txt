@@ -1,0 +1,1527 @@
+2022_11_27 23:44:45 | zh_train.py：20 line | INFO | {
+    "eps": [
+        1e-30,
+        0.001
+    ],
+    "learn_rate": 5e-06,
+    "batch_size": 4,
+    "max_length": 512,
+    "no_cuda": false,
+    "do_train": true,
+    "num_of_epochs": 50,
+    "weight_decay": 0.0,
+    "split_rate": 0.9,
+    "decay_rate": -0.8,
+    "network": "checkpoint-68",
+    "data_set_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data/demo_data.csv",
+    "print_log_step": 99,
+    "clip_threshold": 1.0,
+    "save_train_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\train_data.json",
+    "logging_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\logs",
+    "eval_or_test_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\eval_or_test_data.json",
+    "model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\pretrain_model\\checkpoint-68",
+    "predict_model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output\\checkpoint-68",
+    "output": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output",
+    "predict_file_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\test_predict.json"
+}
+2022_11_27 23:44:46 | zh_train.py：33 line | INFO | Running on the GPU
+2022_11_27 23:44:51 | zh_train.py：60 line | INFO | Running epoch: 1
+2022_11_27 23:44:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.21078217029571533,time:1.6400279998779297
+
+2022_11_27 23:45:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.2110673189163208,time:39.474976778030396
+
+2022_11_27 23:46:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.7312854528427124,time:78.22299289703369
+
+2022_11_27 23:46:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.06099007651209831,time:116.85511684417725
+
+2022_11_27 23:47:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.27218204736709595,time:155.39192271232605
+
+2022_11_27 23:48:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3115610182285309,time:193.86534881591797
+
+2022_11_27 23:48:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9956376552581787,time:231.93074893951416
+
+2022_11_27 23:49:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06249241158366203,time:270.3827347755432
+
+2022_11_27 23:49:59 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.36391621828079224,time:308.4323751926422
+
+2022_11_27 23:50:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5035812854766846,time:346.8067800998688
+
+2022_11_27 23:51:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5923600792884827,time:385.601868391037
+
+2022_11_27 23:51:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5283910036087036,time:424.9625232219696
+
+2022_11_27 23:52:11 | zh_train.py：100 line | INFO | Epoch: 1 , Running loss: 0.39097070116534877,Time 440.59736132621765
+
+2022_11_27 23:52:11 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-1
+2022_11_27 23:52:36 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-1\pytorch_model.bin
+
+2022_11_27 23:52:36 | zh_train.py：60 line | INFO | Running epoch: 2
+2022_11_27 23:52:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.16856485605239868,time:0.348163366317749
+
+2022_11_27 23:53:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9183116555213928,time:39.720536947250366
+
+2022_11_27 23:53:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.49176281690597534,time:78.5072090625763
+
+2022_11_27 23:54:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.13599292933940887,time:117.16240000724792
+
+2022_11_27 23:55:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.24597328901290894,time:155.8948781490326
+
+2022_11_27 23:55:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3634268343448639,time:194.49778699874878
+
+2022_11_27 23:56:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.900132954120636,time:232.78459477424622
+
+2022_11_27 23:57:07 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.07332932949066162,time:271.1451647281647
+
+2022_11_27 23:57:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.34888172149658203,time:309.32513666152954
+
+2022_11_27 23:58:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4583432078361511,time:347.65147399902344
+
+2022_11_27 23:59:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5987333655357361,time:386.4558503627777
+
+2022_11_27 23:59:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.45829644799232483,time:425.26180362701416
+
+2022_11_27 23:59:57 | zh_train.py：100 line | INFO | Epoch: 2 , Running loss: 0.33398118758933587,Time 440.8169720172882
+
+2022_11_27 23:59:57 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-2
+2022_11_28 00:00:29 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-2\pytorch_model.bin
+
+2022_11_28 00:00:29 | zh_train.py：60 line | INFO | Running epoch: 3
+2022_11_28 00:00:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1857360601425171,time:0.3613708019256592
+
+2022_11_28 00:01:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8949585556983948,time:39.895031690597534
+
+2022_11_28 00:01:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.499016135931015,time:78.75766682624817
+
+2022_11_28 00:02:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10487069934606552,time:117.45180439949036
+
+2022_11_28 00:03:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.29348111152648926,time:156.13459181785583
+
+2022_11_28 00:03:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3280113637447357,time:194.69248342514038
+
+2022_11_28 00:04:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8761393427848816,time:232.94644260406494
+
+2022_11_28 00:05:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09864703565835953,time:271.52261877059937
+
+2022_11_28 00:05:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.42499253153800964,time:309.75738191604614
+
+2022_11_28 00:06:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.46408024430274963,time:348.252867937088
+
+2022_11_28 00:06:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.8107989430427551,time:387.18290543556213
+
+2022_11_28 00:07:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5245820879936218,time:426.157634973526
+
+2022_11_28 00:07:51 | zh_train.py：100 line | INFO | Epoch: 3 , Running loss: 0.32436749998901926,Time 441.7987275123596
+
+2022_11_28 00:07:51 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-3
+2022_11_28 00:08:18 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-3\pytorch_model.bin
+
+2022_11_28 00:08:18 | zh_train.py：60 line | INFO | Running epoch: 4
+2022_11_28 00:08:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.14846354722976685,time:0.35718321800231934
+
+2022_11_28 00:08:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9422448873519897,time:39.907470703125
+
+2022_11_28 00:09:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5198520421981812,time:78.80161738395691
+
+2022_11_28 00:10:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10692550987005234,time:117.59959673881531
+
+2022_11_28 00:10:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.27578005194664,time:156.25268268585205
+
+2022_11_28 00:11:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3326517939567566,time:195.29334020614624
+
+2022_11_28 00:12:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9118054509162903,time:233.58019256591797
+
+2022_11_28 00:12:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.10095885396003723,time:272.1086537837982
+
+2022_11_28 00:13:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.4121823012828827,time:310.6386785507202
+
+2022_11_28 00:14:07 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.34714972972869873,time:348.4998502731323
+
+2022_11_28 00:14:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5951815843582153,time:384.91697359085083
+
+2022_11_28 00:15:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5846559405326843,time:421.4637999534607
+
+2022_11_28 00:15:35 | zh_train.py：100 line | INFO | Epoch: 4 , Running loss: 0.32262790116423556,Time 436.13985443115234
+
+2022_11_28 00:15:35 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-4
+2022_11_28 00:16:02 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-4\pytorch_model.bin
+
+2022_11_28 00:16:02 | zh_train.py：60 line | INFO | Running epoch: 5
+2022_11_28 00:16:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17762096226215363,time:0.24329614639282227
+
+2022_11_28 00:16:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8993507027626038,time:36.91098380088806
+
+2022_11_28 00:17:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4015049636363983,time:73.29817724227905
+
+2022_11_28 00:17:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.11208721250295639,time:109.6869626045227
+
+2022_11_28 00:18:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.28475597500801086,time:145.97725367546082
+
+2022_11_28 00:19:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3285081088542938,time:182.32121443748474
+
+2022_11_28 00:19:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8187710046768188,time:218.19576168060303
+
+2022_11_28 00:20:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09318055212497711,time:254.37759280204773
+
+2022_11_28 00:20:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3124697506427765,time:290.4285044670105
+
+2022_11_28 00:21:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.535433292388916,time:326.6901648044586
+
+2022_11_28 00:22:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6491021513938904,time:363.24120593070984
+
+2022_11_28 00:22:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4662599563598633,time:399.7365155220032
+
+2022_11_28 00:22:56 | zh_train.py：100 line | INFO | Epoch: 5 , Running loss: 0.32843213467717625,Time 414.4375307559967
+
+2022_11_28 00:22:56 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-5
+2022_11_28 00:23:24 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-5\pytorch_model.bin
+
+2022_11_28 00:23:24 | zh_train.py：60 line | INFO | Running epoch: 6
+2022_11_28 00:23:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.18549735844135284,time:0.2446300983428955
+
+2022_11_28 00:24:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.038231372833252,time:36.937236309051514
+
+2022_11_28 00:24:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.43551701307296753,time:73.33274793624878
+
+2022_11_28 00:25:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1491568684577942,time:109.66174674034119
+
+2022_11_28 00:25:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2550778388977051,time:146.00031685829163
+
+2022_11_28 00:26:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.35956093668937683,time:182.30682182312012
+
+2022_11_28 00:27:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8993658423423767,time:218.23640084266663
+
+2022_11_28 00:27:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06665357202291489,time:254.33329439163208
+
+2022_11_28 00:28:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.38405805826187134,time:290.3205728530884
+
+2022_11_28 00:28:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4766807556152344,time:326.4968333244324
+
+2022_11_28 00:29:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6664290428161621,time:362.90681505203247
+
+2022_11_28 00:30:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5323305726051331,time:399.3348424434662
+
+2022_11_28 00:30:18 | zh_train.py：100 line | INFO | Epoch: 6 , Running loss: 0.33841099893671284,Time 414.00398087501526
+
+2022_11_28 00:30:18 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-6
+2022_11_28 00:30:44 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-6\pytorch_model.bin
+
+2022_11_28 00:30:44 | zh_train.py：60 line | INFO | Running epoch: 7
+2022_11_28 00:30:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.15429294109344482,time:0.30083775520324707
+
+2022_11_28 00:31:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.0204555988311768,time:36.86289429664612
+
+2022_11_28 00:31:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.449436753988266,time:73.23363447189331
+
+2022_11_28 00:32:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1848936825990677,time:109.65086507797241
+
+2022_11_28 00:33:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.24742503464221954,time:146.09063601493835
+
+2022_11_28 00:33:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.39292433857917786,time:182.43127489089966
+
+2022_11_28 00:34:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8795299530029297,time:218.4002914428711
+
+2022_11_28 00:34:59 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0840781182050705,time:254.506516456604
+
+2022_11_28 00:35:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.528070867061615,time:290.5009140968323
+
+2022_11_28 00:36:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.7740218639373779,time:326.72474241256714
+
+2022_11_28 00:36:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6556494832038879,time:363.14976811408997
+
+2022_11_28 00:37:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4835394620895386,time:399.6412181854248
+
+2022_11_28 00:37:39 | zh_train.py：100 line | INFO | Epoch: 7 , Running loss: 0.3797777042318688,Time 414.2841980457306
+
+2022_11_28 00:37:39 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-7
+2022_11_28 00:38:08 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-7\pytorch_model.bin
+
+2022_11_28 00:38:08 | zh_train.py：60 line | INFO | Running epoch: 8
+2022_11_28 00:38:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.21845167875289917,time:0.34879159927368164
+
+2022_11_28 00:38:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.9268758296966553,time:36.89808368682861
+
+2022_11_28 00:39:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5395736694335938,time:73.24726986885071
+
+2022_11_28 00:39:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.12591417133808136,time:109.5722918510437
+
+2022_11_28 00:40:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.31716445088386536,time:145.9198260307312
+
+2022_11_28 00:41:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37779462337493896,time:182.15665650367737
+
+2022_11_28 00:41:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8557261824607849,time:218.0852394104004
+
+2022_11_28 00:42:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06777678430080414,time:254.1518919467926
+
+2022_11_28 00:42:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.43937548995018005,time:290.0940628051758
+
+2022_11_28 00:43:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5406941771507263,time:326.2219681739807
+
+2022_11_28 00:44:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6073538064956665,time:362.63023018836975
+
+2022_11_28 00:44:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5542972683906555,time:399.0107660293579
+
+2022_11_28 00:45:02 | zh_train.py：100 line | INFO | Epoch: 8 , Running loss: 0.3919925592123773,Time 413.67964267730713
+
+2022_11_28 00:45:02 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-8
+2022_11_28 00:45:31 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-8\pytorch_model.bin
+
+2022_11_28 00:45:31 | zh_train.py：60 line | INFO | Running epoch: 9
+2022_11_28 00:45:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.19451838731765747,time:0.2934393882751465
+
+2022_11_28 00:46:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9342002272605896,time:36.862895488739014
+
+2022_11_28 00:46:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.45251286029815674,time:73.08190965652466
+
+2022_11_28 00:47:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.39946454763412476,time:109.38841032981873
+
+2022_11_28 00:47:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2965555191040039,time:145.61783814430237
+
+2022_11_28 00:48:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.40769854187965393,time:181.83186960220337
+
+2022_11_28 00:49:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.92160964012146,time:217.64959120750427
+
+2022_11_28 00:49:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06751101464033127,time:253.63673043251038
+
+2022_11_28 00:50:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.40419960021972656,time:289.5315291881561
+
+2022_11_28 00:50:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5097137689590454,time:325.63125586509705
+
+2022_11_28 00:51:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.8063555359840393,time:362.0215697288513
+
+2022_11_28 00:52:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5681487917900085,time:398.4490656852722
+
+2022_11_28 00:52:24 | zh_train.py：100 line | INFO | Epoch: 9 , Running loss: 0.3867130666652596,Time 413.1047339439392
+
+2022_11_28 00:52:24 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-9
+2022_11_28 00:52:54 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-9\pytorch_model.bin
+
+2022_11_28 00:52:54 | zh_train.py：60 line | INFO | Running epoch: 10
+2022_11_28 00:52:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.20021860301494598,time:0.2644176483154297
+
+2022_11_28 00:53:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9371577501296997,time:36.722331523895264
+
+2022_11_28 00:54:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4492984116077423,time:73.0711600780487
+
+2022_11_28 00:54:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.14382563531398773,time:109.44464993476868
+
+2022_11_28 00:55:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.33870676159858704,time:145.74429893493652
+
+2022_11_28 00:55:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.30182477831840515,time:182.00316715240479
+
+2022_11_28 00:56:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9121652245521545,time:217.8586642742157
+
+2022_11_28 00:57:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.1890309900045395,time:253.94785857200623
+
+2022_11_28 00:57:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3414877653121948,time:289.86638712882996
+
+2022_11_28 00:58:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.3398714065551758,time:326.04049253463745
+
+2022_11_28 00:58:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5528212785720825,time:362.473126411438
+
+2022_11_28 00:59:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5056263208389282,time:398.9683840274811
+
+2022_11_28 00:59:48 | zh_train.py：100 line | INFO | Epoch: 10 , Running loss: 0.3445063940207793,Time 413.67280673980713
+
+2022_11_28 00:59:48 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-10
+2022_11_28 01:00:16 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-10\pytorch_model.bin
+
+2022_11_28 01:00:16 | zh_train.py：60 line | INFO | Running epoch: 11
+2022_11_28 01:00:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1361289769411087,time:0.3493053913116455
+
+2022_11_28 01:00:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8756464719772339,time:36.917377948760986
+
+2022_11_28 01:01:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5210716724395752,time:73.28631019592285
+
+2022_11_28 01:02:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1466563493013382,time:109.63255596160889
+
+2022_11_28 01:02:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.7706151604652405,time:145.9104986190796
+
+2022_11_28 01:03:18 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3442760705947876,time:182.19209671020508
+
+2022_11_28 01:03:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9988815784454346,time:218.02720642089844
+
+2022_11_28 01:04:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.16141152381896973,time:254.14231967926025
+
+2022_11_28 01:05:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.4066673517227173,time:290.143483877182
+
+2022_11_28 01:05:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.6646875143051147,time:326.3546407222748
+
+2022_11_28 01:06:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6262220144271851,time:362.8544063568115
+
+2022_11_28 01:06:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5784969925880432,time:399.3228368759155
+
+2022_11_28 01:07:10 | zh_train.py：100 line | INFO | Epoch: 11 , Running loss: 0.3310574850103145,Time 414.02628564834595
+
+2022_11_28 01:07:10 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-11
+2022_11_28 01:07:37 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-11\pytorch_model.bin
+
+2022_11_28 01:07:37 | zh_train.py：60 line | INFO | Running epoch: 12
+2022_11_28 01:07:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17405731976032257,time:0.29421401023864746
+
+2022_11_28 01:08:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.921876072883606,time:36.883233308792114
+
+2022_11_28 01:08:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.47211331129074097,time:73.26579093933105
+
+2022_11_28 01:09:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.09588775038719177,time:109.62508773803711
+
+2022_11_28 01:10:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.22182928025722504,time:145.88011479377747
+
+2022_11_28 01:10:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37402161955833435,time:182.1670582294464
+
+2022_11_28 01:11:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8879595994949341,time:218.00532174110413
+
+2022_11_28 01:11:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0811958760023117,time:254.07763290405273
+
+2022_11_28 01:12:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.7265018820762634,time:290.03804421424866
+
+2022_11_28 01:13:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.47501838207244873,time:326.1957242488861
+
+2022_11_28 01:13:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5990976095199585,time:362.5819025039673
+
+2022_11_28 01:14:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.585732638835907,time:399.1059920787811
+
+2022_11_28 01:14:31 | zh_train.py：100 line | INFO | Epoch: 12 , Running loss: 0.31866059658760754,Time 413.7840039730072
+
+2022_11_28 01:14:31 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-12
+2022_11_28 01:14:59 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-12\pytorch_model.bin
+
+2022_11_28 01:14:59 | zh_train.py：60 line | INFO | Running epoch: 13
+2022_11_28 01:14:59 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.2749466300010681,time:0.2529184818267822
+
+2022_11_28 01:15:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8814775943756104,time:36.84410095214844
+
+2022_11_28 01:16:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5269014835357666,time:73.20525550842285
+
+2022_11_28 01:16:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.15560874342918396,time:109.57253003120422
+
+2022_11_28 01:17:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3244991600513458,time:145.99182772636414
+
+2022_11_28 01:18:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.28140270709991455,time:182.31282019615173
+
+2022_11_28 01:18:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9491680264472961,time:218.20858812332153
+
+2022_11_28 01:19:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09198436886072159,time:254.25255680084229
+
+2022_11_28 01:19:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.4171299636363983,time:290.1965243816376
+
+2022_11_28 01:20:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5451186299324036,time:326.3558602333069
+
+2022_11_28 01:21:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5157560110092163,time:362.74181389808655
+
+2022_11_28 01:21:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5556603074073792,time:399.2308523654938
+
+2022_11_28 01:21:53 | zh_train.py：100 line | INFO | Epoch: 13 , Running loss: 0.3237493350831539,Time 413.8672034740448
+
+2022_11_28 01:21:53 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-13
+2022_11_28 01:22:22 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-13\pytorch_model.bin
+
+2022_11_28 01:22:22 | zh_train.py：60 line | INFO | Running epoch: 14
+2022_11_28 01:22:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.14895601570606232,time:0.24694395065307617
+
+2022_11_28 01:22:59 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9150252342224121,time:36.827011585235596
+
+2022_11_28 01:23:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.435735285282135,time:73.17623782157898
+
+2022_11_28 01:24:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10584583133459091,time:109.54526805877686
+
+2022_11_28 01:24:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.26477640867233276,time:145.84984612464905
+
+2022_11_28 01:25:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.4887208044528961,time:182.0897397994995
+
+2022_11_28 01:26:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8646960854530334,time:217.92788529396057
+
+2022_11_28 01:26:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.3396724760532379,time:253.99629020690918
+
+2022_11_28 01:27:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.43047866225242615,time:289.91505336761475
+
+2022_11_28 01:27:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.6220455765724182,time:326.04154562950134
+
+2022_11_28 01:28:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5736691951751709,time:362.4432907104492
+
+2022_11_28 01:29:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5618631839752197,time:398.9049413204193
+
+2022_11_28 01:29:16 | zh_train.py：100 line | INFO | Epoch: 14 , Running loss: 0.3232103525341579,Time 413.55622029304504
+
+2022_11_28 01:29:16 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-14
+2022_11_28 01:29:43 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-14\pytorch_model.bin
+
+2022_11_28 01:29:43 | zh_train.py：60 line | INFO | Running epoch: 15
+2022_11_28 01:29:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1470278799533844,time:0.20291471481323242
+
+2022_11_28 01:30:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8941370248794556,time:36.771023988723755
+
+2022_11_28 01:30:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.48856398463249207,time:73.12670540809631
+
+2022_11_28 01:31:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10999085009098053,time:110.3936595916748
+
+2022_11_28 01:32:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.26512372493743896,time:146.75445342063904
+
+2022_11_28 01:32:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2758689820766449,time:182.96660709381104
+
+2022_11_28 01:33:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8668277263641357,time:218.79137802124023
+
+2022_11_28 01:33:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09955871105194092,time:254.88907766342163
+
+2022_11_28 01:34:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3989020884037018,time:290.8846642971039
+
+2022_11_28 01:35:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5252230167388916,time:327.0810616016388
+
+2022_11_28 01:35:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6391602158546448,time:363.4878785610199
+
+2022_11_28 01:36:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5679939985275269,time:399.9642961025238
+
+2022_11_28 01:36:38 | zh_train.py：100 line | INFO | Epoch: 15 , Running loss: 0.3220078431554822,Time 414.6673514842987
+
+2022_11_28 01:36:38 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-15
+2022_11_28 01:37:05 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-15\pytorch_model.bin
+
+2022_11_28 01:37:05 | zh_train.py：60 line | INFO | Running epoch: 16
+2022_11_28 01:37:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.18398144841194153,time:0.35731935501098633
+
+2022_11_28 01:37:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8829641342163086,time:36.961029291152954
+
+2022_11_28 01:38:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5782973170280457,time:73.35274744033813
+
+2022_11_28 01:38:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.14941084384918213,time:109.6858217716217
+
+2022_11_28 01:39:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.28219228982925415,time:146.07005286216736
+
+2022_11_28 01:40:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.42590954899787903,time:182.36966848373413
+
+2022_11_28 01:40:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9445476531982422,time:218.17986345291138
+
+2022_11_28 01:41:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08733149617910385,time:254.314936876297
+
+2022_11_28 01:41:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.34569141268730164,time:290.3376979827881
+
+2022_11_28 01:42:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4746706187725067,time:326.5771675109863
+
+2022_11_28 01:43:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6087355017662048,time:363.025586605072
+
+2022_11_28 01:43:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5637713074684143,time:399.4928307533264
+
+2022_11_28 01:44:00 | zh_train.py：100 line | INFO | Epoch: 16 , Running loss: 0.3243205507978072,Time 414.1588170528412
+
+2022_11_28 01:44:00 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-16
+2022_11_28 01:44:27 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-16\pytorch_model.bin
+
+2022_11_28 01:44:27 | zh_train.py：60 line | INFO | Running epoch: 17
+2022_11_28 01:44:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17283447086811066,time:0.3609950542449951
+
+2022_11_28 01:45:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9330511689186096,time:36.95702528953552
+
+2022_11_28 01:45:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.6341269016265869,time:73.29546236991882
+
+2022_11_28 01:46:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.172852024435997,time:109.61843371391296
+
+2022_11_28 01:46:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.22350724041461945,time:145.94264912605286
+
+2022_11_28 01:47:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.30866140127182007,time:182.24000883102417
+
+2022_11_28 01:48:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8577056527137756,time:218.10597038269043
+
+2022_11_28 01:48:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08166170865297318,time:254.17564868927002
+
+2022_11_28 01:49:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.34690719842910767,time:290.12458515167236
+
+2022_11_28 01:49:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4443286657333374,time:326.2779703140259
+
+2022_11_28 01:50:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5909486413002014,time:362.7404625415802
+
+2022_11_28 01:51:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4970611035823822,time:399.22163581848145
+
+2022_11_28 01:51:21 | zh_train.py：100 line | INFO | Epoch: 17 , Running loss: 0.3573273393203708,Time 413.9017925262451
+
+2022_11_28 01:51:21 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-17
+2022_11_28 01:51:48 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-17\pytorch_model.bin
+
+2022_11_28 01:51:48 | zh_train.py：60 line | INFO | Running epoch: 18
+2022_11_28 01:51:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.16400682926177979,time:0.28729677200317383
+
+2022_11_28 01:52:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.2564181089401245,time:36.859920024871826
+
+2022_11_28 01:53:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4950767755508423,time:73.18976020812988
+
+2022_11_28 01:53:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.118477962911129,time:109.49410033226013
+
+2022_11_28 01:54:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2879794239997864,time:145.8277599811554
+
+2022_11_28 01:54:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3631090521812439,time:182.0589144229889
+
+2022_11_28 01:55:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9487863779067993,time:217.89203429222107
+
+2022_11_28 01:56:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.05550152808427811,time:254.03328204154968
+
+2022_11_28 01:56:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3886096477508545,time:289.96326065063477
+
+2022_11_28 01:57:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.6028817296028137,time:326.1647267341614
+
+2022_11_28 01:57:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.7634992599487305,time:362.59401750564575
+
+2022_11_28 01:58:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5594325065612793,time:398.999804019928
+
+2022_11_28 01:58:42 | zh_train.py：100 line | INFO | Epoch: 18 , Running loss: 0.3170509214158002,Time 413.6262700557709
+
+2022_11_28 01:58:42 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-18
+2022_11_28 01:59:14 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-18\pytorch_model.bin
+
+2022_11_28 01:59:14 | zh_train.py：60 line | INFO | Running epoch: 19
+2022_11_28 01:59:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.14460547268390656,time:0.3700733184814453
+
+2022_11_28 01:59:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9362646341323853,time:36.849706172943115
+
+2022_11_28 02:00:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.44146305322647095,time:73.29127430915833
+
+2022_11_28 02:01:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.12209050357341766,time:109.76747536659241
+
+2022_11_28 02:01:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2774500250816345,time:146.2143805027008
+
+2022_11_28 02:02:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.32965749502182007,time:182.54889369010925
+
+2022_11_28 02:02:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9289091229438782,time:218.40931129455566
+
+2022_11_28 02:03:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08466184139251709,time:254.52560901641846
+
+2022_11_28 02:04:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3833465874195099,time:290.55211424827576
+
+2022_11_28 02:04:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.8584237098693848,time:326.72058844566345
+
+2022_11_28 02:05:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6158357858657837,time:363.1771879196167
+
+2022_11_28 02:05:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5162186622619629,time:399.6276249885559
+
+2022_11_28 02:06:08 | zh_train.py：100 line | INFO | Epoch: 19 , Running loss: 0.3136240273604149,Time 414.3142304420471
+
+2022_11_28 02:06:08 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-19
+2022_11_28 02:06:36 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-19\pytorch_model.bin
+
+2022_11_28 02:06:36 | zh_train.py：60 line | INFO | Running epoch: 20
+2022_11_28 02:06:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.841054379940033,time:0.2983086109161377
+
+2022_11_28 02:07:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9363969564437866,time:36.87941861152649
+
+2022_11_28 02:07:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4258649945259094,time:73.20551204681396
+
+2022_11_28 02:08:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.17463810741901398,time:109.55216765403748
+
+2022_11_28 02:09:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3413524329662323,time:145.86330270767212
+
+2022_11_28 02:09:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3832918405532837,time:182.1148579120636
+
+2022_11_28 02:10:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9442331790924072,time:217.99548888206482
+
+2022_11_28 02:10:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0647214725613594,time:254.08754634857178
+
+2022_11_28 02:11:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3218510150909424,time:290.0350933074951
+
+2022_11_28 02:12:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4493332803249359,time:326.27357721328735
+
+2022_11_28 02:12:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5538722276687622,time:362.7523105144501
+
+2022_11_28 02:13:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4964885413646698,time:399.217826128006
+
+2022_11_28 02:13:30 | zh_train.py：100 line | INFO | Epoch: 20 , Running loss: 0.3100883858508625,Time 413.88843870162964
+
+2022_11_28 02:13:30 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-20
+2022_11_28 02:13:59 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-20\pytorch_model.bin
+
+2022_11_28 02:13:59 | zh_train.py：60 line | INFO | Running epoch: 21
+2022_11_28 02:14:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1602756679058075,time:0.3208043575286865
+
+2022_11_28 02:14:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9286782145500183,time:36.90883493423462
+
+2022_11_28 02:15:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.43296805024147034,time:73.26846051216125
+
+2022_11_28 02:15:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.20573462545871735,time:109.66074585914612
+
+2022_11_28 02:16:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3015907108783722,time:146.01221680641174
+
+2022_11_28 02:17:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.36454513669013977,time:182.3820252418518
+
+2022_11_28 02:17:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8889560103416443,time:218.25547862052917
+
+2022_11_28 02:18:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09047325700521469,time:254.41181254386902
+
+2022_11_28 02:18:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3822544515132904,time:290.4246356487274
+
+2022_11_28 02:19:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.48674482107162476,time:326.6596622467041
+
+2022_11_28 02:20:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5714245438575745,time:363.1124565601349
+
+2022_11_28 02:20:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4550406336784363,time:399.5308508872986
+
+2022_11_28 02:20:54 | zh_train.py：100 line | INFO | Epoch: 21 , Running loss: 0.3132961571203215,Time 414.19962453842163
+
+2022_11_28 02:20:54 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-21
+2022_11_28 02:21:25 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-21\pytorch_model.bin
+
+2022_11_28 02:21:25 | zh_train.py：60 line | INFO | Running epoch: 22
+2022_11_28 02:21:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.19174589216709137,time:0.22678589820861816
+
+2022_11_28 02:22:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8778472542762756,time:36.79797029495239
+
+2022_11_28 02:22:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.42538055777549744,time:73.12797403335571
+
+2022_11_28 02:23:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1459420919418335,time:109.54850792884827
+
+2022_11_28 02:23:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2729336619377136,time:145.84559559822083
+
+2022_11_28 02:24:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3336161673069,time:182.04229140281677
+
+2022_11_28 02:25:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9219284653663635,time:217.9079327583313
+
+2022_11_28 02:25:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0788392424583435,time:253.99128818511963
+
+2022_11_28 02:26:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.36413803696632385,time:289.94595074653625
+
+2022_11_28 02:26:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4866524040699005,time:326.131605386734
+
+2022_11_28 02:27:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.9073284864425659,time:362.6194837093353
+
+2022_11_28 02:28:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4959257245063782,time:399.1360037326813
+
+2022_11_28 02:28:19 | zh_train.py：100 line | INFO | Epoch: 22 , Running loss: 0.3117194429947512,Time 413.7937741279602
+
+2022_11_28 02:28:19 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-22
+2022_11_28 02:28:46 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-22\pytorch_model.bin
+
+2022_11_28 02:28:46 | zh_train.py：60 line | INFO | Running epoch: 23
+2022_11_28 02:28:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.11218363046646118,time:0.38175415992736816
+
+2022_11_28 02:29:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9621803164482117,time:36.99510622024536
+
+2022_11_28 02:30:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4497922360897064,time:73.35450792312622
+
+2022_11_28 02:30:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1534215658903122,time:109.74617671966553
+
+2022_11_28 02:31:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.26711422204971313,time:146.17569231987
+
+2022_11_28 02:31:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3063293397426605,time:182.4565200805664
+
+2022_11_28 02:32:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8356338739395142,time:218.33220911026
+
+2022_11_28 02:33:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0931137278676033,time:254.40926361083984
+
+2022_11_28 02:33:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.4155299961566925,time:290.29458832740784
+
+2022_11_28 02:34:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5833685398101807,time:326.4741516113281
+
+2022_11_28 02:34:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6086361408233643,time:362.8191759586334
+
+2022_11_28 02:35:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5477567911148071,time:399.31997561454773
+
+2022_11_28 02:35:40 | zh_train.py：100 line | INFO | Epoch: 23 , Running loss: 0.30730564289234663,Time 413.9713366031647
+
+2022_11_28 02:35:40 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-23
+2022_11_28 02:36:08 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-23\pytorch_model.bin
+
+2022_11_28 02:36:08 | zh_train.py：60 line | INFO | Running epoch: 24
+2022_11_28 02:36:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.16473571956157684,time:0.2261650562286377
+
+2022_11_28 02:36:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9248167276382446,time:36.7951762676239
+
+2022_11_28 02:37:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.36144155263900757,time:73.17054319381714
+
+2022_11_28 02:37:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.09176801145076752,time:109.5017774105072
+
+2022_11_28 02:38:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2624637484550476,time:145.83060550689697
+
+2022_11_28 02:39:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.39891719818115234,time:182.05387163162231
+
+2022_11_28 02:39:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9321188926696777,time:217.80844449996948
+
+2022_11_28 02:40:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09482288360595703,time:253.87780809402466
+
+2022_11_28 02:40:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.38402098417282104,time:289.78380703926086
+
+2022_11_28 02:41:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.7045737504959106,time:325.96283078193665
+
+2022_11_28 02:42:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6483206152915955,time:362.32412576675415
+
+2022_11_28 02:42:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4862169921398163,time:398.70788836479187
+
+2022_11_28 02:43:01 | zh_train.py：100 line | INFO | Epoch: 24 , Running loss: 0.3078111817561197,Time 413.3766276836395
+
+2022_11_28 02:43:01 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-24
+2022_11_28 02:43:29 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-24\pytorch_model.bin
+
+2022_11_28 02:43:29 | zh_train.py：60 line | INFO | Running epoch: 25
+2022_11_28 02:43:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.2403567135334015,time:0.3679933547973633
+
+2022_11_28 02:44:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8824359774589539,time:37.01073336601257
+
+2022_11_28 02:44:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5053051114082336,time:73.49891829490662
+
+2022_11_28 02:45:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1150769293308258,time:109.93174147605896
+
+2022_11_28 02:45:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2780998945236206,time:146.26177549362183
+
+2022_11_28 02:46:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.32465383410453796,time:182.5832483768463
+
+2022_11_28 02:47:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9460465908050537,time:218.45580291748047
+
+2022_11_28 02:47:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08556549996137619,time:254.56185245513916
+
+2022_11_28 02:48:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.38458332419395447,time:290.5815579891205
+
+2022_11_28 02:48:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4499146044254303,time:326.8054111003876
+
+2022_11_28 02:49:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5536397695541382,time:363.25163888931274
+
+2022_11_28 02:50:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4915250837802887,time:399.7684648036957
+
+2022_11_28 02:50:24 | zh_train.py：100 line | INFO | Epoch: 25 , Running loss: 0.3090616863494237,Time 414.4283947944641
+
+2022_11_28 02:50:24 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-25
+2022_11_28 02:50:52 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-25\pytorch_model.bin
+
+2022_11_28 02:50:52 | zh_train.py：60 line | INFO | Running epoch: 26
+2022_11_28 02:50:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1055484488606453,time:0.35068702697753906
+
+2022_11_28 02:51:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8982929587364197,time:36.95811748504639
+
+2022_11_28 02:52:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.3583000600337982,time:73.33431100845337
+
+2022_11_28 02:52:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.05739365890622139,time:109.71499752998352
+
+2022_11_28 02:53:18 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2590295672416687,time:146.10378503799438
+
+2022_11_28 02:53:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3261333405971527,time:182.37951469421387
+
+2022_11_28 02:54:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8686510920524597,time:218.21330785751343
+
+2022_11_28 02:55:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.07888752967119217,time:254.3276822566986
+
+2022_11_28 02:55:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3787858188152313,time:290.2877643108368
+
+2022_11_28 02:56:18 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.36188292503356934,time:326.51435565948486
+
+2022_11_28 02:56:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.49590107798576355,time:362.9461598396301
+
+2022_11_28 02:57:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.6163731217384338,time:399.42471289634705
+
+2022_11_28 02:57:46 | zh_train.py：100 line | INFO | Epoch: 26 , Running loss: 0.30775258041832126,Time 414.11406230926514
+
+2022_11_28 02:57:46 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-26
+2022_11_28 02:58:14 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-26\pytorch_model.bin
+
+2022_11_28 02:58:14 | zh_train.py：60 line | INFO | Running epoch: 27
+2022_11_28 02:58:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.2097291648387909,time:0.2777726650238037
+
+2022_11_28 02:58:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8879086971282959,time:36.79591369628906
+
+2022_11_28 02:59:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.49675002694129944,time:73.2174162864685
+
+2022_11_28 03:00:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.12324811518192291,time:109.5719223022461
+
+2022_11_28 03:00:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2913776934146881,time:145.92533564567566
+
+2022_11_28 03:01:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3000587224960327,time:182.2234787940979
+
+2022_11_28 03:01:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.799497663974762,time:218.15327095985413
+
+2022_11_28 03:02:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.17240506410598755,time:254.27735924720764
+
+2022_11_28 03:03:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.35641515254974365,time:290.2302222251892
+
+2022_11_28 03:03:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.49623072147369385,time:326.4331133365631
+
+2022_11_28 03:04:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5724388957023621,time:362.9208815097809
+
+2022_11_28 03:04:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5211131572723389,time:399.4283936023712
+
+2022_11_28 03:05:09 | zh_train.py：100 line | INFO | Epoch: 27 , Running loss: 0.3091531151161489,Time 414.1357305049896
+
+2022_11_28 03:05:09 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-27
+2022_11_28 03:05:37 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-27\pytorch_model.bin
+
+2022_11_28 03:05:37 | zh_train.py：60 line | INFO | Running epoch: 28
+2022_11_28 03:05:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17578165233135223,time:0.3270597457885742
+
+2022_11_28 03:06:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8860406279563904,time:36.928953409194946
+
+2022_11_28 03:06:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5073667764663696,time:73.31808924674988
+
+2022_11_28 03:07:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.0916908010840416,time:109.74564814567566
+
+2022_11_28 03:08:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.28581205010414124,time:146.148681640625
+
+2022_11_28 03:08:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2722184360027313,time:182.39454889297485
+
+2022_11_28 03:09:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8487592935562134,time:218.25261402130127
+
+2022_11_28 03:09:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.07146909832954407,time:254.33966970443726
+
+2022_11_28 03:10:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.4111594557762146,time:290.36361742019653
+
+2022_11_28 03:11:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.396664023399353,time:326.51147079467773
+
+2022_11_28 03:11:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5324082970619202,time:362.9414734840393
+
+2022_11_28 03:12:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.543034553527832,time:399.4395258426666
+
+2022_11_28 03:12:31 | zh_train.py：100 line | INFO | Epoch: 28 , Running loss: 0.3105338240351284,Time 414.11651849746704
+
+2022_11_28 03:12:31 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-28
+2022_11_28 03:13:00 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-28\pytorch_model.bin
+
+2022_11_28 03:13:00 | zh_train.py：60 line | INFO | Running epoch: 29
+2022_11_28 03:13:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1815013438463211,time:0.3213651180267334
+
+2022_11_28 03:13:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9070125818252563,time:36.9242639541626
+
+2022_11_28 03:14:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5272495150566101,time:73.30640363693237
+
+2022_11_28 03:14:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.12411487847566605,time:109.6428713798523
+
+2022_11_28 03:15:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3059346079826355,time:145.9653980731964
+
+2022_11_28 03:16:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.3887214660644531,time:182.15280747413635
+
+2022_11_28 03:16:38 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8491971492767334,time:218.0542643070221
+
+2022_11_28 03:17:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06376366317272186,time:254.14502024650574
+
+2022_11_28 03:17:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3527599573135376,time:290.0991072654724
+
+2022_11_28 03:18:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4214976727962494,time:326.28689885139465
+
+2022_11_28 03:19:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5998109579086304,time:362.7911751270294
+
+2022_11_28 03:19:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.45740199089050293,time:399.23362278938293
+
+2022_11_28 03:19:53 | zh_train.py：100 line | INFO | Epoch: 29 , Running loss: 0.3104282532517087,Time 413.92189145088196
+
+2022_11_28 03:19:53 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-29
+2022_11_28 03:20:23 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-29\pytorch_model.bin
+
+2022_11_28 03:20:23 | zh_train.py：60 line | INFO | Running epoch: 30
+2022_11_28 03:20:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.13554777204990387,time:0.29280781745910645
+
+2022_11_28 03:21:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8581192493438721,time:36.87156128883362
+
+2022_11_28 03:21:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5429616570472717,time:73.34358596801758
+
+2022_11_28 03:22:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.142253115773201,time:109.7826292514801
+
+2022_11_28 03:22:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.313518226146698,time:146.10498929023743
+
+2022_11_28 03:23:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.40684011578559875,time:182.36145114898682
+
+2022_11_28 03:24:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9205248355865479,time:218.1765959262848
+
+2022_11_28 03:24:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08984119445085526,time:254.2527687549591
+
+2022_11_28 03:25:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.37614473700523376,time:290.24573516845703
+
+2022_11_28 03:25:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.41168808937072754,time:326.437468290329
+
+2022_11_28 03:26:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.7257497906684875,time:362.8465647697449
+
+2022_11_28 03:27:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5433502793312073,time:399.32262086868286
+
+2022_11_28 03:27:17 | zh_train.py：100 line | INFO | Epoch: 30 , Running loss: 0.31271789059899985,Time 414.02755403518677
+
+2022_11_28 03:27:17 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-30
+2022_11_28 03:27:43 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-30\pytorch_model.bin
+
+2022_11_28 03:27:43 | zh_train.py：60 line | INFO | Running epoch: 31
+2022_11_28 03:27:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.7955927848815918,time:0.35284948348999023
+
+2022_11_28 03:28:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8689244985580444,time:37.02653169631958
+
+2022_11_28 03:28:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4840117394924164,time:73.43193793296814
+
+2022_11_28 03:29:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.08311151713132858,time:109.8531243801117
+
+2022_11_28 03:30:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.27855223417282104,time:146.2666780948639
+
+2022_11_28 03:30:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.30269113183021545,time:182.497944355011
+
+2022_11_28 03:31:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8810285329818726,time:218.39666438102722
+
+2022_11_28 03:31:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.05576643347740173,time:254.52261185646057
+
+2022_11_28 03:32:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3563920557498932,time:290.5254578590393
+
+2022_11_28 03:33:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4146844148635864,time:326.71521615982056
+
+2022_11_28 03:33:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.49157315492630005,time:363.12600231170654
+
+2022_11_28 03:34:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4604312777519226,time:399.60181283950806
+
+2022_11_28 03:34:38 | zh_train.py：100 line | INFO | Epoch: 31 , Running loss: 0.3174757427139359,Time 414.2917754650116
+
+2022_11_28 03:34:38 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-31
+2022_11_28 03:35:06 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-31\pytorch_model.bin
+
+2022_11_28 03:35:06 | zh_train.py：60 line | INFO | Running epoch: 32
+2022_11_28 03:35:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1619432121515274,time:0.3217160701751709
+
+2022_11_28 03:35:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8811758160591125,time:36.87569212913513
+
+2022_11_28 03:36:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.41787251830101013,time:73.24774742126465
+
+2022_11_28 03:36:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10411059856414795,time:109.64186215400696
+
+2022_11_28 03:37:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.28307095170021057,time:146.01912713050842
+
+2022_11_28 03:38:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2921840250492096,time:182.2988920211792
+
+2022_11_28 03:38:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8957297801971436,time:218.17564964294434
+
+2022_11_28 03:39:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08079314976930618,time:254.3029866218567
+
+2022_11_28 03:39:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3436741232872009,time:290.32080912590027
+
+2022_11_28 03:40:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4700452983379364,time:326.52471256256104
+
+2022_11_28 03:41:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5030289888381958,time:363.04601216316223
+
+2022_11_28 03:41:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.45395681262016296,time:399.5557210445404
+
+2022_11_28 03:42:00 | zh_train.py：100 line | INFO | Epoch: 32 , Running loss: 0.31001883272328185,Time 414.2710065841675
+
+2022_11_28 03:42:00 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-32
+2022_11_28 03:42:29 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-32\pytorch_model.bin
+
+2022_11_28 03:42:29 | zh_train.py：60 line | INFO | Running epoch: 33
+2022_11_28 03:42:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1690606325864792,time:0.26581668853759766
+
+2022_11_28 03:43:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9193013906478882,time:36.88157892227173
+
+2022_11_28 03:43:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.43357521295547485,time:73.26125240325928
+
+2022_11_28 03:44:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1517162322998047,time:109.68493151664734
+
+2022_11_28 03:44:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2561548352241516,time:146.0272719860077
+
+2022_11_28 03:45:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2983253300189972,time:182.28944301605225
+
+2022_11_28 03:46:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8512212634086609,time:218.14591264724731
+
+2022_11_28 03:46:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0945090502500534,time:254.16887950897217
+
+2022_11_28 03:47:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.2988775074481964,time:290.15770506858826
+
+2022_11_28 03:47:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5205251574516296,time:326.3186721801758
+
+2022_11_28 03:48:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5967175364494324,time:362.7600347995758
+
+2022_11_28 03:49:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5726507306098938,time:399.2289619445801
+
+2022_11_28 03:49:23 | zh_train.py：100 line | INFO | Epoch: 33 , Running loss: 0.3101220850667885,Time 413.90267276763916
+
+2022_11_28 03:49:23 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-33
+2022_11_28 03:49:51 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-33\pytorch_model.bin
+
+2022_11_28 03:49:51 | zh_train.py：60 line | INFO | Running epoch: 34
+2022_11_28 03:49:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.18696877360343933,time:0.30063796043395996
+
+2022_11_28 03:50:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.929811418056488,time:36.93450951576233
+
+2022_11_28 03:51:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.45278748869895935,time:73.35331296920776
+
+2022_11_28 03:51:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.14868080615997314,time:109.72222995758057
+
+2022_11_28 03:52:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2452983260154724,time:146.02645301818848
+
+2022_11_28 03:52:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2712823748588562,time:182.2936384677887
+
+2022_11_28 03:53:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8833722472190857,time:218.23470950126648
+
+2022_11_28 03:54:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09738251566886902,time:254.37953996658325
+
+2022_11_28 03:54:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.36571717262268066,time:290.37353253364563
+
+2022_11_28 03:55:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.33864954113960266,time:326.6231849193573
+
+2022_11_28 03:55:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.611927330493927,time:363.12689232826233
+
+2022_11_28 03:56:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5327968001365662,time:399.6234550476074
+
+2022_11_28 03:56:45 | zh_train.py：100 line | INFO | Epoch: 34 , Running loss: 0.3093829526379556,Time 414.30131912231445
+
+2022_11_28 03:56:45 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-34
+2022_11_28 03:57:12 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-34\pytorch_model.bin
+
+2022_11_28 03:57:12 | zh_train.py：60 line | INFO | Running epoch: 35
+2022_11_28 03:57:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17078587412834167,time:0.3706657886505127
+
+2022_11_28 03:57:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.957273542881012,time:37.030221939086914
+
+2022_11_28 03:58:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.49278995394706726,time:73.47998094558716
+
+2022_11_28 03:59:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.0844942182302475,time:109.9137966632843
+
+2022_11_28 03:59:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3244567811489105,time:146.25052976608276
+
+2022_11_28 04:00:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.25680220127105713,time:182.5742859840393
+
+2022_11_28 04:00:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8726006150245667,time:218.4635398387909
+
+2022_11_28 04:01:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.12493748962879181,time:254.61134243011475
+
+2022_11_28 04:02:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.35219499468803406,time:290.74433875083923
+
+2022_11_28 04:02:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5029839277267456,time:326.98839020729065
+
+2022_11_28 04:03:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.570167601108551,time:363.5093984603882
+
+2022_11_28 04:03:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.49692726135253906,time:400.04816699028015
+
+2022_11_28 04:04:07 | zh_train.py：100 line | INFO | Epoch: 35 , Running loss: 0.3162718159243155,Time 414.75929498672485
+
+2022_11_28 04:04:07 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-35
+2022_11_28 04:04:34 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-35\pytorch_model.bin
+
+2022_11_28 04:04:34 | zh_train.py：60 line | INFO | Running epoch: 36
+2022_11_28 04:04:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.13525822758674622,time:0.3374605178833008
+
+2022_11_28 04:05:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.0205631256103516,time:37.1299262046814
+
+2022_11_28 04:05:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.3651632070541382,time:73.59629321098328
+
+2022_11_28 04:06:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.15735137462615967,time:109.98704934120178
+
+2022_11_28 04:07:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.24175550043582916,time:146.34556651115417
+
+2022_11_28 04:07:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2733972370624542,time:182.66946363449097
+
+2022_11_28 04:08:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.7832310199737549,time:218.527996301651
+
+2022_11_28 04:08:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0922396257519722,time:254.613938331604
+
+2022_11_28 04:09:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.35209545493125916,time:290.537962436676
+
+2022_11_28 04:10:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5045632123947144,time:326.6690323352814
+
+2022_11_28 04:10:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.6336525082588196,time:363.11430048942566
+
+2022_11_28 04:11:14 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4781801104545593,time:399.6502890586853
+
+2022_11_28 04:11:29 | zh_train.py：100 line | INFO | Epoch: 36 , Running loss: 0.31249126217304246,Time 414.37745237350464
+
+2022_11_28 04:11:29 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-36
+2022_11_28 04:11:58 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-36\pytorch_model.bin
+
+2022_11_28 04:11:58 | zh_train.py：60 line | INFO | Running epoch: 37
+2022_11_28 04:11:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.14687280356884003,time:0.30739903450012207
+
+2022_11_28 04:12:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9064691066741943,time:36.98038053512573
+
+2022_11_28 04:13:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.45758000016212463,time:73.45559287071228
+
+2022_11_28 04:13:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.21198594570159912,time:109.81221413612366
+
+2022_11_28 04:14:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.4165492057800293,time:146.15332674980164
+
+2022_11_28 04:15:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37456950545310974,time:182.44389700889587
+
+2022_11_28 04:15:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8739542961120605,time:218.29780054092407
+
+2022_11_28 04:16:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.09085509926080704,time:254.39766383171082
+
+2022_11_28 04:16:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.34454643726348877,time:290.39614939689636
+
+2022_11_28 04:17:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5049691796302795,time:326.60097789764404
+
+2022_11_28 04:18:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.587559163570404,time:363.05557584762573
+
+2022_11_28 04:18:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5000463128089905,time:399.5136544704437
+
+2022_11_28 04:18:52 | zh_train.py：100 line | INFO | Epoch: 37 , Running loss: 0.30859348882863114,Time 414.1725857257843
+
+2022_11_28 04:18:52 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-37
+2022_11_28 04:19:19 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-37\pytorch_model.bin
+
+2022_11_28 04:19:19 | zh_train.py：60 line | INFO | Running epoch: 38
+2022_11_28 04:19:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1685066968202591,time:0.2996046543121338
+
+2022_11_28 04:19:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9249185919761658,time:36.904940366744995
+
+2022_11_28 04:20:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.40515992045402527,time:73.27204322814941
+
+2022_11_28 04:21:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1082707941532135,time:109.57923626899719
+
+2022_11_28 04:21:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2875942587852478,time:145.9156813621521
+
+2022_11_28 04:22:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2919587790966034,time:182.1850345134735
+
+2022_11_28 04:22:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8605726361274719,time:218.05512046813965
+
+2022_11_28 04:23:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.13757769763469696,time:254.1049530506134
+
+2022_11_28 04:24:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.31798961758613586,time:290.0596933364868
+
+2022_11_28 04:24:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.3709007501602173,time:326.22652769088745
+
+2022_11_28 04:25:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5846831798553467,time:362.6611394882202
+
+2022_11_28 04:25:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.6102997064590454,time:399.0795855522156
+
+2022_11_28 04:26:13 | zh_train.py：100 line | INFO | Epoch: 38 , Running loss: 0.30236359254384276,Time 413.75314569473267
+
+2022_11_28 04:26:13 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-38
+2022_11_28 04:26:43 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-38\pytorch_model.bin
+
+2022_11_28 04:26:43 | zh_train.py：60 line | INFO | Running epoch: 39
+2022_11_28 04:26:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.12952958047389984,time:0.35230541229248047
+
+2022_11_28 04:27:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8708625435829163,time:36.9415647983551
+
+2022_11_28 04:27:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5006791353225708,time:73.31677961349487
+
+2022_11_28 04:28:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.10263805836439133,time:109.67421412467957
+
+2022_11_28 04:29:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2661910951137543,time:146.05648231506348
+
+2022_11_28 04:29:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37672120332717896,time:182.32072019577026
+
+2022_11_28 04:30:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8725383281707764,time:218.2299222946167
+
+2022_11_28 04:30:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0957452654838562,time:254.3193323612213
+
+2022_11_28 04:31:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3494024872779846,time:290.3373565673828
+
+2022_11_28 04:32:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.3168147802352905,time:326.5687701702118
+
+2022_11_28 04:32:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5699928402900696,time:363.0082941055298
+
+2022_11_28 04:33:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.504100501537323,time:399.4641396999359
+
+2022_11_28 04:33:37 | zh_train.py：100 line | INFO | Epoch: 39 , Running loss: 0.30268615889147615,Time 414.15053844451904
+
+2022_11_28 04:33:37 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-39
+2022_11_28 04:34:05 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-39\pytorch_model.bin
+
+2022_11_28 04:34:05 | zh_train.py：60 line | INFO | Running epoch: 40
+2022_11_28 04:34:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17829680442810059,time:0.29114699363708496
+
+2022_11_28 04:34:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8670187592506409,time:36.83147621154785
+
+2022_11_28 04:35:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.49507027864456177,time:73.18645524978638
+
+2022_11_28 04:35:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.15321621298789978,time:109.51723670959473
+
+2022_11_28 04:36:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.29244497418403625,time:145.88580060005188
+
+2022_11_28 04:37:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2753966152667999,time:182.1357455253601
+
+2022_11_28 04:37:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8373526334762573,time:218.0157744884491
+
+2022_11_28 04:38:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08464556932449341,time:254.13042068481445
+
+2022_11_28 04:38:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3433730900287628,time:290.09248518943787
+
+2022_11_28 04:39:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5534736514091492,time:326.31146931648254
+
+2022_11_28 04:40:08 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5745275020599365,time:362.7369394302368
+
+2022_11_28 04:40:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.46801841259002686,time:399.21334314346313
+
+2022_11_28 04:40:59 | zh_train.py：100 line | INFO | Epoch: 40 , Running loss: 0.29749801285948124,Time 413.85867643356323
+
+2022_11_28 04:40:59 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-40
+2022_11_28 04:41:27 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-40\pytorch_model.bin
+
+2022_11_28 04:41:27 | zh_train.py：60 line | INFO | Running epoch: 41
+2022_11_28 04:41:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.15189257264137268,time:0.36451005935668945
+
+2022_11_28 04:42:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9406482577323914,time:37.005589723587036
+
+2022_11_28 04:42:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5506375432014465,time:73.38485217094421
+
+2022_11_28 04:43:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.07802802324295044,time:109.82068824768066
+
+2022_11_28 04:43:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.3129114508628845,time:146.151034116745
+
+2022_11_28 04:44:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37244632840156555,time:182.4442014694214
+
+2022_11_28 04:45:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8590616583824158,time:218.3792598247528
+
+2022_11_28 04:45:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08729486167430878,time:254.43297719955444
+
+2022_11_28 04:46:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3275110423564911,time:290.372332572937
+
+2022_11_28 04:46:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.464220255613327,time:326.55463576316833
+
+2022_11_28 04:47:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5274415016174316,time:363.0027723312378
+
+2022_11_28 04:48:06 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.446211576461792,time:399.51735496520996
+
+2022_11_28 04:48:21 | zh_train.py：100 line | INFO | Epoch: 41 , Running loss: 0.30356386260269136,Time 414.1988592147827
+
+2022_11_28 04:48:21 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-41
+2022_11_28 04:48:51 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-41\pytorch_model.bin
+
+2022_11_28 04:48:51 | zh_train.py：60 line | INFO | Running epoch: 42
+2022_11_28 04:48:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17022277414798737,time:0.2799215316772461
+
+2022_11_28 04:49:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:1.0118494033813477,time:36.86898875236511
+
+2022_11_28 04:50:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.46553343534469604,time:73.24731421470642
+
+2022_11_28 04:50:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.11252202838659286,time:109.55806350708008
+
+2022_11_28 04:51:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2354692816734314,time:145.83956146240234
+
+2022_11_28 04:51:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2937842011451721,time:182.08101558685303
+
+2022_11_28 04:52:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.9601884484291077,time:217.90941166877747
+
+2022_11_28 04:53:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06467016786336899,time:253.96200966835022
+
+2022_11_28 04:53:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.33353838324546814,time:289.8546772003174
+
+2022_11_28 04:54:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.3696880042552948,time:325.9683675765991
+
+2022_11_28 04:54:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5952748656272888,time:362.46350741386414
+
+2022_11_28 04:55:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.48586922883987427,time:399.0470292568207
+
+2022_11_28 04:55:45 | zh_train.py：100 line | INFO | Epoch: 42 , Running loss: 0.29940162002899207,Time 413.7700171470642
+
+2022_11_28 04:55:45 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-42
+2022_11_28 04:56:13 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-42\pytorch_model.bin
+
+2022_11_28 04:56:13 | zh_train.py：60 line | INFO | Running epoch: 43
+2022_11_28 04:56:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.12897691130638123,time:0.2432997226715088
+
+2022_11_28 04:56:50 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9515231847763062,time:36.88753890991211
+
+2022_11_28 04:57:26 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4265359342098236,time:73.33983945846558
+
+2022_11_28 04:58:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.09117195755243301,time:109.66859769821167
+
+2022_11_28 04:58:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.26872971653938293,time:145.91939520835876
+
+2022_11_28 04:59:15 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2400979995727539,time:182.06731295585632
+
+2022_11_28 04:59:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8055641055107117,time:217.91271710395813
+
+2022_11_28 05:00:27 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.0599047988653183,time:253.96026492118835
+
+2022_11_28 05:01:03 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.30717983841896057,time:289.90377616882324
+
+2022_11_28 05:01:39 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5308531522750854,time:326.1148302555084
+
+2022_11_28 05:02:16 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5340545773506165,time:362.5751893520355
+
+2022_11_28 05:02:52 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4460901618003845,time:399.02970457077026
+
+2022_11_28 05:03:07 | zh_train.py：100 line | INFO | Epoch: 43 , Running loss: 0.3074259413755313,Time 413.69787859916687
+
+2022_11_28 05:03:07 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-43
+2022_11_28 05:03:34 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-43\pytorch_model.bin
+
+2022_11_28 05:03:34 | zh_train.py：60 line | INFO | Running epoch: 44
+2022_11_28 05:03:35 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.21486824750900269,time:0.2048788070678711
+
+2022_11_28 05:04:11 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8747292160987854,time:36.757553577423096
+
+2022_11_28 05:04:47 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.7841248512268066,time:73.08158111572266
+
+2022_11_28 05:05:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.15256573259830475,time:109.44775891304016
+
+2022_11_28 05:06:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.22932764887809753,time:145.71691179275513
+
+2022_11_28 05:06:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.37481650710105896,time:181.97031021118164
+
+2022_11_28 05:07:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.7953547239303589,time:217.80031371116638
+
+2022_11_28 05:07:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08651414513587952,time:253.92520117759705
+
+2022_11_28 05:08:24 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.37181058526039124,time:289.87673926353455
+
+2022_11_28 05:09:00 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.49105778336524963,time:326.0165674686432
+
+2022_11_28 05:09:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5330566763877869,time:362.46652579307556
+
+2022_11_28 05:10:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.42527931928634644,time:398.879567861557
+
+2022_11_28 05:10:28 | zh_train.py：100 line | INFO | Epoch: 44 , Running loss: 0.3099597866433053,Time 413.52144598960876
+
+2022_11_28 05:10:28 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-44
+2022_11_28 05:10:55 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-44\pytorch_model.bin
+
+2022_11_28 05:10:55 | zh_train.py：60 line | INFO | Running epoch: 45
+2022_11_28 05:10:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.10576270520687103,time:0.37276196479797363
+
+2022_11_28 05:11:32 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9522964358329773,time:36.96881890296936
+
+2022_11_28 05:12:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.5160965919494629,time:73.28698253631592
+
+2022_11_28 05:12:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.15141481161117554,time:109.5536093711853
+
+2022_11_28 05:13:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2722553610801697,time:145.86764359474182
+
+2022_11_28 05:13:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.25250157713890076,time:182.12116622924805
+
+2022_11_28 05:14:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.809182345867157,time:217.99492716789246
+
+2022_11_28 05:15:10 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06213776394724846,time:254.05981731414795
+
+2022_11_28 05:15:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3495401442050934,time:289.91154980659485
+
+2022_11_28 05:16:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4784969985485077,time:326.0800836086273
+
+2022_11_28 05:16:58 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5447938442230225,time:362.4901316165924
+
+2022_11_28 05:17:34 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5091320872306824,time:398.96732330322266
+
+2022_11_28 05:17:49 | zh_train.py：100 line | INFO | Epoch: 45 , Running loss: 0.2980947583561772,Time 413.6258521080017
+
+2022_11_28 05:17:49 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-45
+2022_11_28 05:18:23 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-45\pytorch_model.bin
+
+2022_11_28 05:18:23 | zh_train.py：60 line | INFO | Running epoch: 46
+2022_11_28 05:18:23 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.1463920772075653,time:0.2952601909637451
+
+2022_11_28 05:18:59 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.9472178816795349,time:36.86972427368164
+
+2022_11_28 05:19:36 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.4103870391845703,time:73.24724173545837
+
+2022_11_28 05:20:12 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.09277231246232986,time:109.52054643630981
+
+2022_11_28 05:20:48 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.23338045179843903,time:145.78918266296387
+
+2022_11_28 05:21:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2984273433685303,time:182.07115054130554
+
+2022_11_28 05:22:01 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.7832109332084656,time:217.98724699020386
+
+2022_11_28 05:22:37 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.07719161361455917,time:254.08017134666443
+
+2022_11_28 05:23:13 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.3417694866657257,time:290.04542326927185
+
+2022_11_28 05:23:49 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.44783252477645874,time:326.221666097641
+
+2022_11_28 05:24:25 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5961894392967224,time:362.667115688324
+
+2022_11_28 05:25:02 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.43039223551750183,time:399.11533880233765
+
+2022_11_28 05:25:16 | zh_train.py：100 line | INFO | Epoch: 46 , Running loss: 0.2922919596659771,Time 413.7972481250763
+
+2022_11_28 05:25:16 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-46
+2022_11_28 05:25:43 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-46\pytorch_model.bin
+
+2022_11_28 05:25:43 | zh_train.py：60 line | INFO | Running epoch: 47
+2022_11_28 05:25:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.17256562411785126,time:0.2879981994628906
+
+2022_11_28 05:26:20 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.910480260848999,time:36.83577561378479
+
+2022_11_28 05:26:56 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.49390479922294617,time:73.15687441825867
+
+2022_11_28 05:27:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.0780634805560112,time:109.46760725975037
+
+2022_11_28 05:28:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2899787425994873,time:145.7925591468811
+
+2022_11_28 05:28:45 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2747124433517456,time:181.95154786109924
+
+2022_11_28 05:29:21 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8394334316253662,time:217.79369950294495
+
+2022_11_28 05:29:57 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.08080784231424332,time:253.79774141311646
+
+2022_11_28 05:30:33 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.34636667370796204,time:289.7911171913147
+
+2022_11_28 05:31:09 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.422759473323822,time:325.96592450141907
+
+2022_11_28 05:31:46 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5602402687072754,time:362.3685567378998
+
+2022_11_28 05:32:22 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.5182137489318848,time:398.81078577041626
+
+2022_11_28 05:32:37 | zh_train.py：100 line | INFO | Epoch: 47 , Running loss: 0.29293204990677546,Time 413.4701943397522
+
+2022_11_28 05:32:37 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-47
+2022_11_28 05:33:05 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-47\pytorch_model.bin
+
+2022_11_28 05:33:05 | zh_train.py：60 line | INFO | Running epoch: 48
+2022_11_28 05:33:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.19965271651744843,time:0.21033811569213867
+
+2022_11_28 05:33:42 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8888511061668396,time:36.727845668792725
+
+2022_11_28 05:34:18 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.42118123173713684,time:73.06631469726562
+
+2022_11_28 05:34:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.152035191655159,time:109.31086730957031
+
+2022_11_28 05:35:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2917354106903076,time:145.54472756385803
+
+2022_11_28 05:36:07 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2707812488079071,time:181.7624807357788
+
+2022_11_28 05:36:43 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8441487550735474,time:217.6244990825653
+
+2022_11_28 05:37:19 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.07098472118377686,time:253.61625170707703
+
+2022_11_28 05:37:55 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.40438953042030334,time:289.5129108428955
+
+2022_11_28 05:38:31 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.4232657253742218,time:325.74341225624084
+
+2022_11_28 05:39:07 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5102698802947998,time:362.2628598213196
+
+2022_11_28 05:39:44 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.43117555975914,time:398.8101885318756
+
+2022_11_28 05:39:59 | zh_train.py：100 line | INFO | Epoch: 48 , Running loss: 0.294237435239841,Time 413.48690915107727
+
+2022_11_28 05:39:59 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-48
+2022_11_28 05:40:27 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-48\pytorch_model.bin
+
+2022_11_28 05:40:27 | zh_train.py：60 line | INFO | Running epoch: 49
+2022_11_28 05:40:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.14736126363277435,time:0.32940673828125
+
+2022_11_28 05:41:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8852166533470154,time:36.95680570602417
+
+2022_11_28 05:41:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.3185947835445404,time:73.3149962425232
+
+2022_11_28 05:42:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.14204950630664825,time:109.73165988922119
+
+2022_11_28 05:42:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.2540699243545532,time:146.01986837387085
+
+2022_11_28 05:43:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.381531685590744,time:182.1942858695984
+
+2022_11_28 05:44:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8120607137680054,time:217.99549293518066
+
+2022_11_28 05:44:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.06678780168294907,time:254.04258513450623
+
+2022_11_28 05:45:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.37385818362236023,time:290.0070106983185
+
+2022_11_28 05:45:54 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.5441838502883911,time:326.17290449142456
+
+2022_11_28 05:46:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.5662739276885986,time:362.6409549713135
+
+2022_11_28 05:47:07 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.47839516401290894,time:399.1714789867401
+
+2022_11_28 05:47:21 | zh_train.py：100 line | INFO | Epoch: 49 , Running loss: 0.2938287462066247,Time 413.82670736312866
+
+2022_11_28 05:47:21 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-49
+2022_11_28 05:47:51 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-49\pytorch_model.bin
+
+2022_11_28 05:47:51 | zh_train.py：60 line | INFO | Running epoch: 50
+2022_11_28 05:47:51 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1,loss:0.4111948609352112,time:0.2257063388824463
+
+2022_11_28 05:48:28 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:100,loss:0.8715736865997314,time:36.815083742141724
+
+2022_11_28 05:49:04 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:199,loss:0.44720181822776794,time:73.15832161903381
+
+2022_11_28 05:49:40 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:298,loss:0.1365417242050171,time:109.48508644104004
+
+2022_11_28 05:50:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:397,loss:0.29000720381736755,time:145.82502031326294
+
+2022_11_28 05:50:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:496,loss:0.2748640775680542,time:182.12884068489075
+
+2022_11_28 05:51:29 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:595,loss:0.8093560934066772,time:217.99779272079468
+
+2022_11_28 05:52:05 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:694,loss:0.05253906175494194,time:254.0716154575348
+
+2022_11_28 05:52:41 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:793,loss:0.45731601119041443,time:290.01307463645935
+
+2022_11_28 05:53:17 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:892,loss:0.39356473088264465,time:326.22790455818176
+
+2022_11_28 05:53:53 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:991,loss:0.4760341942310333,time:362.6244750022888
+
+2022_11_28 05:54:30 | zh_train.py：93 line | INFO | total batch num:1254,batch_num:1090,loss:0.4464966356754303,time:399.1108384132385
+
+2022_11_28 05:54:44 | zh_train.py：100 line | INFO | Epoch: 50 , Running loss: 0.29233230522312403,Time 413.7690062522888
+
+2022_11_28 05:54:44 | zh_train.py：107 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-50
+2022_11_28 05:55:13 | zh_train.py：113 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-50\pytorch_model.bin
+

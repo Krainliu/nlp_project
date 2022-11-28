@@ -1,0 +1,48 @@
+2022_11_28 10:30:43 | zh_train.py：19 line | INFO | {
+    "eps": [
+        1e-30,
+        0.001
+    ],
+    "learn_rate": 5e-06,
+    "train_batch_size": 2,
+    "eval_batch_size": 2,
+    "max_length": 512,
+    "no_cuda": false,
+    "do_train": true,
+    "do_eval": true,
+    "evaluate_during_training": true,
+    "num_of_epochs": 2,
+    "weight_decay": 0.0,
+    "split_rate": 0.9,
+    "decay_rate": -0.8,
+    "network": "checkpoint-68",
+    "data_set_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data/demo_data.csv",
+    "print_log_step": 99,
+    "clip_threshold": 1.0,
+    "save_train_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\train_data.json",
+    "logging_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\logs",
+    "eval_or_test_data_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\eval_or_test_data.json",
+    "model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\pretrain_model\\checkpoint-68",
+    "predict_model_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output\\checkpoint-68",
+    "output": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\output",
+    "predict_file_path": "E:\\ENOCH-2022\\NLP_MODEL\\text_generation\\key2text-main\\data\\test_predict.json"
+}
+2022_11_28 10:30:43 | zh_train.py：34 line | INFO | Running on the GPU
+2022_11_28 10:30:48 | zh_train.py：90 line | INFO | Running epoch: 1
+2022_11_28 10:30:50 | zh_train.py：121 line | INFO | total batch num:22,batch_num:1,loss:0.031259942799806595,time:1.659998893737793
+
+2022_11_28 10:30:58 | zh_train.py：128 line | INFO | Epoch: 1 , Running loss: 0.5652427141639319,Time 9.129671335220337
+
+2022_11_28 10:30:58 | zh_train.py：68 line | INFO | 验证集训练损失：0.13052959740161896
+2022_11_28 10:30:58 | zh_train.py：144 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-1
+2022_11_28 10:31:25 | zh_train.py：150 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-1\pytorch_model.bin
+
+2022_11_28 10:31:25 | zh_train.py：90 line | INFO | Running epoch: 2
+2022_11_28 10:31:26 | zh_train.py：121 line | INFO | total batch num:22,batch_num:1,loss:0.0039656381122767925,time:0.32967424392700195
+
+2022_11_28 10:31:33 | zh_train.py：128 line | INFO | Epoch: 2 , Running loss: 0.37257468583993614,Time 7.502614498138428
+
+2022_11_28 10:31:33 | zh_train.py：68 line | INFO | 验证集训练损失：0.1296852082014084
+2022_11_28 10:31:33 | zh_train.py：144 line | INFO | Saving model checkpoint to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-2
+2022_11_28 10:32:08 | zh_train.py：150 line | INFO | successfully save the model to E:\ENOCH-2022\NLP_MODEL\text_generation\key2text-main\output\checkpoint-2\pytorch_model.bin
+
