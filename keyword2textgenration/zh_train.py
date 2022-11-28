@@ -58,7 +58,7 @@ def evaluate(arg, eval_model, eval_data_loader, device):
             input_batch.append(inputs)
             labels = eval_row['target_text'] + '</s>'
             label_batch.append(labels)
-            org_text_list.append(eval_row['input_text'])
+            org_text_list.append(eval_row['target_text'])
             # 验证集预测，获得结果
         input_batch = tokenizer.batch_encode_plus(
             input_batch, padding=True, max_length=args.max_length, return_tensors='pt')["input_ids"]
