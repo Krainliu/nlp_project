@@ -83,7 +83,7 @@ def evaluate(arg, eval_model, eval_data_loader, device):
     perplexity = torch.tensor(perplexity)
     logger.info(f"Eval_loss:{total_val_loss},perplexity:{perplexity},F1:{F1.mean():.3f},精确率:"
                 f"{P.mean():.3f}，召回率:{R.mean():.3f}")
-    return eval_loss, perplexity
+    return F1.mean().item(), perplexity
 
 
 def model_train():
@@ -140,40 +140,21 @@ def model_train():
             optimizer.step()
         running_loss = running_loss / int(train_num_of_batches)
         logger.info('Epoch: {} , Running loss: {},Time {}\n'.format(epoch, running_loss, time.time() - start_time))
-        # todo 添加验证集验证，当满足某些条件时，可以进行模型保存
         if args.do_eval and args.evaluate_during_training:
-            evaluate(args, model, eval_or_test_data, dev)
-
-        save_model_file_dir = os.path.join(args.output, f"checkpoint-{epoch}")
-        if not os.path.exists(save_model_file_dir):
-            os.makedirs(save_model_file_dir)
-        logger.info("Saving model checkpoint to %s", save_model_file_dir)
-        save_model_path = os.path.join(save_model_file_dir, "pytorch_model.bin")
-        model.save_pretrained(save_model_file_dir)
-        tokenizer.save_pretrained(save_model_file_dir)
-        # Good practice: save your training arguments together with the trained model
-        torch.save(model.state_dict(), save_model_path)
-        logger.info(f"successfully save the model to {save_model_path}\n")
-
-
-def evaluate_result(eval_model, arg, texts_list):
-    result_list = []
-    texts = [i['input_text'].replace("# ", "") for i in texts_list]
-    for num, txt in enumerate(texts):
-        eval_model.eval()
-        temp_dict = copy.deepcopy(texts_list[num])
-        temp_dict['input_text'] = temp_dict['input_text'].replace("# ", "")
-        temp_dict['target_text'] = temp_dict['target_text'].replace("# ", "")
-        input_ids = tokenizer.encode("keywords:{} </s>".format(txt), return_tensors="pt")
-        outputs = eval_model.generate(input_ids, max_length=arg.max_length, min_length=0)
-        result = re.sub('<pad> |</s>|# ', "", tokenizer.decode(outputs[0], errors='ignore'))
-        temp_dict.update({"predict_text": result})
-        result_list.append(temp_dict)
-    write_json(arg.predict_file_path, result_list)
-    return result_list
+            f1, _ = evaluate(args, model, eval_or_test_data, dev)
+            if args.f1_threshold_value < f1:
+                save_model_file_dir = os.path.join(args.output, f"checkpoint-{epoch}")
+                if not os.path.exists(save_model_file_dir):
+                    os.makedirs(save_model_file_dir)
+                save_model_path = os.path.join(save_model_file_dir, "pytorch_model.bin")
+                model.save_pretrained(save_model_file_dir)
+                tokenizer.save_pretrained(save_model_file_dir)
+                # Good practice: save your training arguments together with the trained model
+                torch.save(model.state_dict(), save_model_path)
+                logger.info(f"f1: {f1} Greater than the set value,save the model to {save_model_path}\n")
 
 
-def predict_or_eval():
+def predict():
     test_file_path = os.path.join(base_dir, "data", "eval_or_test_data.json")
     if os.path.exists(test_file_path):
         test_list = read_json(test_file_path)
@@ -188,4 +169,4 @@ if __name__ == "__main__":
     if args.do_train:
         model_train()
     else:
-        predict_or_eval()
+        predict()
