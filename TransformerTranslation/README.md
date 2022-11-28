@@ -7,7 +7,7 @@
 
 ## 1. 环境准备
 
-<img src="TransformerTranslation/imgs/image-20221128175341544.png" alt="image-20221128175341544" style="zoom: 80%;" />
+<img src="imgs/image-20221128175341544.jpg" alt="image-20221128175341544" style="zoom: 80%;" />
 
 ```
 matplotlib==3.5.3
