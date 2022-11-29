@@ -1,18 +1,13 @@
 import os
 import time
 import torch
-import logging
 from config.config import Config
 from model.TranslationModel import TranslationModel
-from utils.data_helpers import LoadEnglishGermanDataset, my_tokenizer
-
-logging.basicConfig(format='%(asctime)s-%(levelname)s-%(name)s-%(message)s', datefmt='%m/%d/%Y %H:%M:%S',
-                    level=logging.INFO)
-logger = logging.getLogger(__name__)
+from utils.data_helpers import LoadEnglishChineseDataset, my_tokenizer, logger
 
 
 class CustomSchedule(object):
-    def __init__(self, d_model, warmup_steps=4000, optimizer=None):
+    def __init__(self, d_model, warmup_steps, optimizer=None):
         super(CustomSchedule, self).__init__()
         self.d_model = torch.tensor(d_model, dtype=torch.float32)
         self.warmup_steps = warmup_steps
@@ -49,11 +44,11 @@ def accuracy(logits, y_true, PAD_IDX):
 
 
 def train_model(train_config):
-    logging.info(f"model train device {train_config.device}")
-    data_loader = LoadEnglishGermanDataset(train_config.train_corpus_file_paths,
-                                           batch_size=train_config.batch_size,
-                                           tokenizer=my_tokenizer,
-                                           min_freq=train_config.min_freq)
+    logger.info(f"Model train on device: {train_config.device}")
+    data_loader = LoadEnglishChineseDataset(train_config.train_corpus_file_paths,
+                                            batch_size=train_config.batch_size,
+                                            tokenizer=my_tokenizer,
+                                            min_freq=train_config.min_freq)
 
     train_iter, valid_iter, test_iter = \
         data_loader.load_train_val_test_data(train_config.train_corpus_file_paths,
@@ -62,7 +57,7 @@ def train_model(train_config):
     translation_model = TranslationModel(src_vocab_size=len(data_loader.ch_vocab),
                                          tgt_vocab_size=len(data_loader.en_vocab),
                                          d_model=train_config.d_model,
-                                         nhead=train_config.num_head,
+                                         n_head=train_config.num_head,
                                          num_encoder_layers=train_config.num_encoder_layers,
                                          num_decoder_layers=train_config.num_decoder_layers,
                                          dim_feedforward=train_config.dim_feedforward,
@@ -73,7 +68,7 @@ def train_model(train_config):
 
     optimizer = torch.optim.Adam(translation_model.parameters(), lr=0.,
                                  betas=(train_config.beta1, train_config.beta2), eps=train_config.epsilon)
-    lr_scheduler = CustomSchedule(train_config.d_model, optimizer=optimizer)
+    lr_scheduler = CustomSchedule(train_config.d_model, optimizer=optimizer, warmup_steps=train_config.warmup_steps)
     translation_model.train()
     num = 0
     for epoch in range(train_config.epochs):
@@ -106,14 +101,15 @@ def train_model(train_config):
             losses += loss.item()
             acc, _, _ = accuracy(logits, tgt_out, data_loader.PAD_IDX)
             total_acc += acc
-            msg = f"Epoch: {epoch}, Batch[{idx}/{len(train_iter)}], Train loss :{loss.item():.3f}, Train acc: {acc}"
-            logging.info(msg)
+            # msg = f"Epoch: {epoch}, Batch[{idx}/{len(train_iter)}],
+            # Train loss :{loss.item():.3f}, Train acc: {acc:.5f}"
+            # logger.info(msg)
         average_acc = total_acc / len(train_iter)
         end_time = time.time()
         train_loss = losses / len(train_iter)
         msg = f"Epoch: {epoch}, Train loss: {train_loss:.3f}, Train_acc: {average_acc:.3f} " \
               f"Epoch time : {(end_time - start_time):.3f}s"
-        logging.info(msg)
+        logger.info(msg)
 
         if (epoch % train_config.eval_ratiocinate_step == 0) and train_config.do_eval:
             logger.info("Model eval on validation")
@@ -129,7 +125,7 @@ def train_model(train_config):
                 torch.save(translation_model.state_dict(), save_model_path)
                 logger.info(f"Acc: {acc:.3f} Greater the setting acc {config.acc_threshold_value},"
                             f"successfully save the model to {save_model_path}\n")
-            logging.info(f"Accuracy on validation : {acc:.3f}")
+            logger.info(f"Accuracy on validation : {acc:.3f}")
 
 
 def evaluate(eval_config, valid_iter, model, data_loader):
@@ -161,5 +157,6 @@ def evaluate(eval_config, valid_iter, model, data_loader):
 
 if __name__ == '__main__':
     config = Config()
+    logger = logger(config)
     if config.do_train:
         train_model(config)

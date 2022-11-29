@@ -1,17 +1,26 @@
+import os
+import time
 import logging
 from collections import Counter
 from torchtext.vocab import Vocab
 import torch
+from config.config import Config
 from torch.nn.utils.rnn import pad_sequence
 from torch.utils.data import DataLoader
 from torchtext.data.utils import get_tokenizer
 from tqdm import tqdm
 
+config = Config()
+
 
 def my_tokenizer():
     tokenizer = dict()
-    tokenizer['ch'] = get_tokenizer('spacy', language='zh_core_web_sm')  # 汉语
-    tokenizer['en'] = get_tokenizer('spacy', language='en_core_web_sm')  # 英语
+    if config.english2chinese_translation:
+        tokenizer['source'] = get_tokenizer('spacy', language='en_core_web_sm')  # 英语
+        tokenizer['target'] = get_tokenizer('spacy', language='zh_core_web_sm')  # 汉语
+    else:
+        tokenizer['source'] = get_tokenizer('spacy', language='zh_core_web_sm')  # 汉语
+        tokenizer['target'] = get_tokenizer('spacy', language='en_core_web_sm')  # 英语
     return tokenizer
 
 
@@ -42,14 +51,13 @@ def generate_square_subsequent_mask(sz, device):
     return mask
 
 
-class LoadEnglishGermanDataset:
-    def __init__(self, train_file_paths=None, tokenizer=None,
-                 batch_size=2, min_freq=1):
+class LoadEnglishChineseDataset:
+    def __init__(self, train_file_paths=None, tokenizer=None, batch_size=2, min_freq=1):
         # 根据训练预料建立英语和汉语各自的字典
         self.tokenizer = tokenizer()
-        self.ch_vocab = build_vocab(self.tokenizer['ch'], filepath=train_file_paths[0], min_freq=min_freq)
-        self.en_vocab = build_vocab(self.tokenizer['en'], filepath=train_file_paths[1], min_freq=min_freq)
-        self.specials = ['<unk>', '<pad>', '<bos>', '<eos>']
+        self.ch_vocab = build_vocab(self.tokenizer['source'], filepath=train_file_paths[0], min_freq=min_freq)
+        self.en_vocab = build_vocab(self.tokenizer['target'], filepath=train_file_paths[1], min_freq=min_freq)
+        self.specials = ['<unk>', '<pad>', '<bos>', '<eos>']  # 特殊字符用于处理文本中特殊符号token
         self.PAD_IDX = self.ch_vocab['<pad>']
         self.BOS_IDX = self.ch_vocab['<bos>']
         self.EOS_IDX = self.ch_vocab['<eos>']
@@ -61,16 +69,17 @@ class LoadEnglishGermanDataset:
         :param filepaths:
         :return:
         """
-        raw_de_iter = iter(open(filepaths[0], encoding="utf8"))
-        raw_en_iter = iter(open(filepaths[1], encoding="utf8"))
         data = []
-        # logging.info(f"### 正在将数据集 {filepaths} 转换成 Token ID ")
-        for (raw_de, raw_en) in tqdm(zip(raw_de_iter, raw_en_iter), ncols=80):
-            de_tensor_ = torch.tensor([self.ch_vocab[token] for token in
-                                       self.tokenizer['ch'](raw_de.rstrip("\n"))], dtype=torch.long)
-            en_tensor_ = torch.tensor([self.en_vocab[token] for token in
-                                       self.tokenizer['en'](raw_en.rstrip("\n"))], dtype=torch.long)
-            data.append((de_tensor_, en_tensor_))
+        raw_ch_iter = iter(open(filepaths[0], encoding="utf8"))
+        raw_en_iter = iter(open(filepaths[1], encoding="utf8"))
+        path_list = [i.split('\\')[-1] for i in filepaths]
+        logging.info(f"正在将数据集 {path_list} 转换成 Token ID ")
+        for (raw_ch, raw_en) in tqdm(zip(raw_ch_iter, raw_en_iter), ncols=80):
+            ch_tensor_ = torch.tensor([self.ch_vocab[token] for token in self.tokenizer['source'](raw_ch.rstrip("\n"))],
+                                      dtype=torch.long)
+            en_tensor_ = torch.tensor([self.en_vocab[token] for token in self.tokenizer['target'](raw_en.rstrip("\n"))],
+                                      dtype=torch.long)
+            data.append((ch_tensor_, en_tensor_))
 
         return data
 
@@ -78,12 +87,10 @@ class LoadEnglishGermanDataset:
         train_data = self.data_process(train_file_paths)
         val_data = self.data_process(val_file_paths)
         test_data = self.data_process(test_file_paths)
-        train_iter = DataLoader(train_data, batch_size=self.batch_size,
-                                shuffle=True, collate_fn=self.generate_batch)
-        valid_iter = DataLoader(val_data, batch_size=self.batch_size,
-                                shuffle=True, collate_fn=self.generate_batch)
-        test_iter = DataLoader(test_data, batch_size=self.batch_size,
-                               shuffle=True, collate_fn=self.generate_batch)
+
+        train_iter = DataLoader(train_data, batch_size=self.batch_size, shuffle=True, collate_fn=self.generate_batch)
+        valid_iter = DataLoader(val_data, batch_size=self.batch_size, shuffle=True, collate_fn=self.generate_batch)
+        test_iter = DataLoader(test_data, batch_size=self.batch_size, shuffle=True, collate_fn=self.generate_batch)
         return train_iter, valid_iter, test_iter
 
     def generate_batch(self, data_batch):
@@ -95,16 +102,16 @@ class LoadEnglishGermanDataset:
         :param data_batch:
         :return:
         """
-        de_batch, en_batch = [], []
+        ch_batch, en_batch = [], []
         for (de_item, en_item) in data_batch:  # 开始对一个batch中的每一个样本进行处理。
-            de_batch.append(de_item)  # 编码器输入序列不需要加起止符
+            ch_batch.append(de_item)  # 编码器输入序列不需要加起止符
             # 在每个idx序列的首位加上 起始token 和 结束 token
             en = torch.cat([torch.tensor([self.BOS_IDX]), en_item, torch.tensor([self.EOS_IDX])], dim=0)
             en_batch.append(en)
         # 以最长的序列为标准进行填充
-        de_batch = pad_sequence(de_batch, padding_value=self.PAD_IDX)  # [de_len,batch_size]
+        ch_batch = pad_sequence(ch_batch, padding_value=self.PAD_IDX)  # [ch_len,batch_size]
         en_batch = pad_sequence(en_batch, padding_value=self.PAD_IDX)  # [en_len,batch_size]
-        return de_batch, en_batch
+        return ch_batch, en_batch
 
     def create_mask(self, src, tgt, device='cpu'):
         src_seq_len = src.shape[0]
@@ -122,3 +129,34 @@ class LoadEnglishGermanDataset:
         tgt_padding_mask = (tgt == self.PAD_IDX).transpose(0, 1)
         # 用于mask掉Decoder的Token序列中的padding部分,batch_size, tgt_len
         return src_mask, tgt_mask, src_padding_mask, tgt_padding_mask
+
+
+def logger(arg):
+    # 创建一个日志器
+    log = logging.getLogger('logger')
+    # 判断处理器是否存在，如果有处理器就不添加，如果不存在处理器就添加处理器
+    if not log.handlers:
+        # 设定日志器的日志级别（如果不设定，默认展示WARNING级别以上的日志）
+        log.setLevel(logging.DEBUG)
+        # 创建一个处理器， StreamHandler() 控制台实现日志输出
+        sh = logging.StreamHandler()
+        # 创建处理器，FileHandler() 将日志输出到文件保存
+        fh = logging.FileHandler(
+            os.path.join(arg.logs_dir, f'{time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime())}_log.txt'),
+            encoding='utf-8')
+        # datefmt 表示输出日期的格式
+        lf = logging.Formatter(fmt='%(asctime)s | %(filename)s：%(lineno)d line | %(levelname)s | %(message)s',
+                               datefmt='%Y_%m_%d %H:%M:%S')
+
+        # 控制台输出日志
+        # 在日志器中加入处理器
+        log.addHandler(sh)
+        # 处理器中设置日志输出格式
+        sh.setFormatter(lf)
+        # 给处理器设置级别
+        sh.setLevel(logging.INFO)
+
+        # 文件保存日志
+        log.addHandler(fh)
+        fh.setFormatter(lf)
+    return log
